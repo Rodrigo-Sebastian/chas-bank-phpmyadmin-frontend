@@ -12,10 +12,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack(config) {
-    // Exclude test files from being included in the build
     config.module.rules.push({
       test: /\.test\.js$/,
-      use: 'ignore-loader',
+      use: 'null-loader', 
       include: /pages\/tests/,
     });
     return config;
