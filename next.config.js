@@ -11,14 +11,15 @@ module.exports = nextConfig*/
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config) => {
-    // Lägg till regler för att ignorera testfiler
+  webpack(config) {
+    // Exclude test files from being included in the build
     config.module.rules.push({
       test: /\.test\.js$/,
       use: 'ignore-loader',
+      include: /pages\/tests/,
     });
     return config;
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

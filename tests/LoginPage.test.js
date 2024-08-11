@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import LoginPage from '../login';
+import LoginPage from '../pages/login';
 
 // Mocka fetch globalt
 beforeAll(() => {
