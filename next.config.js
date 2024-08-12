@@ -11,6 +11,7 @@ module.exports = nextConfig*/
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export', // Viktigt för statisk export
   webpack(config) {
     config.module.rules.push({
       test: /\.test\.js$/,
